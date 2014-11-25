@@ -1,0 +1,28 @@
+@import 'typography';
+
+
+header {
+	margin-bottom: 2.85em;
+}
+
+.headline, .body {
+	display:inline-block;
+	vertical-align:top;
+	width: 100%;
+}
+
+.flush-top {
+	margin-top: 0;
+}
+.flush-bottom {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 37.5em){
+	.headline {
+		width: 35%
+	}
+	.body {
+		width: 65%
+	}
+}
