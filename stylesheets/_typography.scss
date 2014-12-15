@@ -263,7 +263,9 @@ PRINT STYLES
 	}
 
 	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
+	a[href^="#"]:after,
+	a[href^="tel:"]:after,
+	a[href^="mailto:"]:after {
 		content: "";
 	}
 
@@ -271,6 +273,13 @@ PRINT STYLES
 		display: none;
 	}
 
+	header {
+		margin-bottom: 0!important;
+	}
+
+	.examples {
+		margin-bottom: 10em;
+	}
 }
 
 /*

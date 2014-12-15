@@ -48,10 +48,10 @@ module.exports = function( grunt ) {
 				dist: {
 					options: {
 						ignore: [],
-						stylesheets  : ['dist/stylesheets/style.css']
+						stylesheets  : ['stylesheets/style.css']
 					},
 					files: {
-						'dist/stylesheets/style.css': ['dist/index.html']
+						'dist/stylesheets/tidy.css': ['dist/index.html']
 					}
 				}
 			},
@@ -86,7 +86,7 @@ module.exports = function( grunt ) {
 					{
 						expand: true,
 						cwd: './',
-						src: ['*.html', 'stylesheets/**/*', '!**/*.scss'],
+						src: ['*.html', '*.ico', 'stylesheets/**/*', '!**/*.scss'],
 						dest: 'dist/'
 					}
 					]
@@ -105,11 +105,11 @@ module.exports = function( grunt ) {
 						host: 'root@cronut.goodtwin.co',
 					}
 				},
-				sync_staging_uploads: {
+				prod: {
 					options: {
-						ssh: true,
-						src: 'root@cronut.goodtwin.co:/var/www/goodtwin/wp-content/uploads/',
-						dest: 'app/wp-content/uploads/',
+						src: 'dist/',
+						dest: '/var/www/thompsongl',
+						host: 'root@thompsongl.com',
 					}
 				}
 			}
@@ -120,5 +120,5 @@ module.exports = function( grunt ) {
 
 		grunt.registerTask('default', ['compile']);
 		grunt.registerTask('compile', ['sass:dist', 'myth:dist']);
-		grunt.registerTask('build', ['compile', 'imagemin:inplace', 'clean:dist', 'copy:dist', 'cssmin:dist' ]);
+		grunt.registerTask('build', ['compile', 'imagemin:inplace', 'clean:dist', 'copy:dist', 'uncss:dist', 'cssmin:dist' ]);
 	};
