@@ -93,6 +93,14 @@ module.exports = function( grunt ) {
 				}
 			},
 
+			inline_style: {
+	      dist: {
+	        files: {
+	          'dist/index.html': ['dist/index.html']
+	        }
+	      }
+	    },
+
 			rsync: {
 				options: {
 					args: ["--verbose"],
@@ -120,5 +128,5 @@ module.exports = function( grunt ) {
 
 		grunt.registerTask('default', ['compile']);
 		grunt.registerTask('compile', ['sass:dist', 'myth:dist']);
-		grunt.registerTask('build', ['compile', 'imagemin:inplace', 'clean:dist', 'copy:dist', 'uncss:dist', 'cssmin:dist' ]);
+		grunt.registerTask('build', ['compile', 'imagemin:inplace', 'clean:dist', 'copy:dist', 'uncss:dist', 'cssmin:dist', 'inline_style:dist' ]);
 	};
