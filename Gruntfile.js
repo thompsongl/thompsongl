@@ -106,13 +106,6 @@ module.exports = function( grunt ) {
 					args: ["--verbose"],
 					recursive: true
 				},
-				staging: {
-					options: {
-						src: 'dist/',
-						dest: '/var/www/<%= config.name  %>',
-						host: 'root@cronut.goodtwin.co',
-					}
-				},
 				prod: {
 					options: {
 						src: 'dist/',
