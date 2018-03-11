@@ -34,7 +34,7 @@ export default () => (
             </section>
         </main>
 
-        <footer>
+        <footer className="f5 fw2">
             <span className="fw6">Contact</span>
             <div>Email to greg [at] thompsongl.com</div>
             <div>@thompsongl on GitHub, Twitter, and almost everywhere else</div>
