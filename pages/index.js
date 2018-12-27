@@ -22,7 +22,7 @@ export default () => (
             <section className="mb4">
                 <div>
                     <span className="fw6">Gist</span>
-                    <div>Design-focused development with JavaScript and (S)CSS by way of React and Angular using a systems approach to interfaces. Experienced with standard web technologies, a host of build tools, some server-side languages, and all the bits in between.</div>
+                    <div>Design-focused development with JavaScript and (S)CSS(-in-JS), often by way of React and other frameworks, using a systems approach to interfaces. Experienced with standard web technologies, a host of build tools, some server-side languages, and all the bits in between.</div>
                 </div>
             </section>
 
