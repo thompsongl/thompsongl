@@ -1,8 +1,4 @@
 .DS_Store
-.sass-cache/
-npm-debug.log
+yarn-error.log
 dist/
 node_modules/
-style.css
-.next
-out
